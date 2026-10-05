@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo 'Checking out source code...'
-                checkout scm
-            }
-        }
-
         stage('Validate Files') {
             steps {
                 echo 'Checking project files...'
@@ -43,7 +36,6 @@ pipeline {
                 '''
             }
         }
-
     }
 
     post {
